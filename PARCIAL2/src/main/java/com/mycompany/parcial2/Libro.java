@@ -1,6 +1,8 @@
 
 package com.mycompany.parcial2;
 
+import java.time.LocalDate;
+
 
 
 public class Libro {
@@ -9,19 +11,22 @@ public class Libro {
     private String autor;
     private int numeroEjemplares;
     private int numeroEjemplaresP;
+    private LocalDate fechaImpresion;
 
     public Libro() {
         this.titulo = "LIBRO POR DEFECTO";
         this.autor = "SANTIAGO GRUESO";
         this.numeroEjemplares = 100;
         this.numeroEjemplaresP = 0;
+        this.fechaImpresion = LocalDate.now();
     }
 
-    public Libro(String titulo, String autor, int numeroEjemplares, int numeroEjemplaresP) {
+    public Libro(String titulo, String autor, int numeroEjemplares, int numeroEjemplaresP, LocalDate local) {
         this.titulo = titulo;
         this.autor = autor;
         this.numeroEjemplares = numeroEjemplares;
         this.numeroEjemplaresP = numeroEjemplaresP;
+        this.fechaImpresion = local;
     
     }
    
@@ -38,15 +43,21 @@ public class Libro {
         this.autor = autor;
     }
 
-    public int getNumeroEjemplares() {
-        return numeroEjemplares;
+    public void setNumeroEjemplares(int numeroEjemplares) {
+        this.numeroEjemplares = numeroEjemplares;
     }
 
-    public int getNumeroEjemplaresP() {
-        return numeroEjemplaresP;
+    public void setNumeroEjemplaresP(int numeroEjemplaresP) {
+        this.numeroEjemplaresP = numeroEjemplaresP;
     }
+
+    public void setFechaImpresion(LocalDate fechaImpresion) {
+        this.fechaImpresion = fechaImpresion;
+    }
+
     
     
+
     
     //GETTERS
 
@@ -57,15 +68,20 @@ public class Libro {
     public String getAutor() {
         return autor;
     }
-
-    public void setNumeroEjemplares(int numeroEjemplares) {
-        this.numeroEjemplares = numeroEjemplares;
+    
+    public int getNumeroEjemplares() {
+        return numeroEjemplares;
     }
 
-    public void setNumeroEjemplaresP(int numeroEjemplaresP) {
-        this.numeroEjemplaresP = numeroEjemplaresP;
+    public int getNumeroEjemplaresP() {
+        return numeroEjemplaresP;
+    }
+
+    public LocalDate getFechaImpresion() {
+        return fechaImpresion;
     }
     
+        
     
     
     public boolean prestamo(){
@@ -110,6 +126,7 @@ public class Libro {
         
         System.out.println("Nombre del libro: "+this.titulo);
         System.out.println("Nombre del autor: "+this.autor);
+        System.out.println("Fecha de impresion: "+this.fechaImpresion);
         
         return super.toString();
     

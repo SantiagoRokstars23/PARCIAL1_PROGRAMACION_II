@@ -4,6 +4,7 @@
 
 package com.mycompany.parcial2;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 /**
@@ -26,7 +27,7 @@ public class PARCIAL1 {
         String nameAutor = scanner.nextLine();
         
         
-        Libro libro = new Libro(nameLibro, nameAutor, 10, 0);
+        Libro libro = new Libro(nameLibro, nameAutor, 10, 0, LocalDate.now());
         
         
         System.out.println("Cuantos libros con el titulo "+libro.getTitulo()+" deseas pedir prestados: "); 
