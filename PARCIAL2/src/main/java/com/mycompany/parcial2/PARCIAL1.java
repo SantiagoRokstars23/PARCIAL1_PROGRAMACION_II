@@ -14,6 +14,7 @@ public class PARCIAL1 {
 
     public static void main(String[] args) {
         
+        Libro libroRegalo = new Libro();
         
         
         Scanner scanner = new Scanner(System.in);
@@ -48,6 +49,11 @@ public class PARCIAL1 {
             
         
         libro.toString();
+        
+        System.out.println("Hola como vas"
+                + " por el prestamo de uno de nuestros libros te regalamos "
+                + "un libro titulado: "+libroRegalo.getTitulo()+ " del autor reconocido "+libro.getAutor()+" tiene un numero "
+                        + "de "+libroRegalo.getNumeroEjemplares()+" ejemplares en el pais");
         
     }
 }

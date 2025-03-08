@@ -11,7 +11,10 @@ public class Libro {
     private int numeroEjemplaresP;
 
     public Libro() {
-    
+        this.titulo = "LIBRO POR DEFECTO";
+        this.autor = "SANTIAGO GRUESO";
+        this.numeroEjemplares = 100;
+        this.numeroEjemplaresP = 0;
     }
 
     public Libro(String titulo, String autor, int numeroEjemplares, int numeroEjemplaresP) {
