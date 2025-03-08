@@ -70,9 +70,9 @@ public class Libro {
     
     public boolean prestamo(){
     
-        if(this.numeroEjemplares!=0){
+        if(this.numeroEjemplaresP <= this.numeroEjemplares){
             this.numeroEjemplaresP++;
-            this.numeroEjemplares--;
+            //this.numeroEjemplares--;
             System.out.println("se presto un libro");
             return true;
         }else if(this.numeroEjemplares==0){
@@ -89,7 +89,7 @@ public class Libro {
         if(this.numeroEjemplaresP!=0){
             
             this.numeroEjemplaresP--;
-            this.numeroEjemplares++;
+            //this.numeroEjemplares++;
             
             System.out.println("libro devuelto con exito");
             return true;
